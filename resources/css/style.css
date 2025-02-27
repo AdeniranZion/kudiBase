@@ -1,0 +1,514 @@
+@font-face {
+    font-family: 'KaTeX_AMS';
+    src: url('/fonts/katex/KaTeX_AMS-Regular.woff2') format('woff2'),
+         url('/fonts/katex/KaTeX_AMS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+background-color: #111111;
+color: #ffffff;
+/* font-family: 'Roboto', sans-serif; */
+font-family: 'KaTeX_AMS', sans-serif !important;
+font-weight: 600;
+}
+
+.navbar {
+background-color: #111111;
+padding: 0 15rem;
+margin-bottom: 2rem; 
+}
+
+.navbar-brand, .nav-link {
+color: #ffffff;
+}
+
+.nav-link {
+    margin: 0 0.5rem;
+    color: #ddd;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+color: #a06af9;
+}
+
+.navbar-toggler {
+border-color: #ffffff;
+}
+
+
+.hero-section {
+background-color: #111111;
+color: #ffffff;
+padding: 50px 20px;
+}
+
+.hero-heading {
+font-size: 2.5rem;
+font-weight: 700;
+margin-bottom: 30px;
+line-height: 1.2;
+}
+
+.hero-heading .highlight {
+color: #a06af9;
+}
+
+.card {
+background-color: #1c1c1c;
+color: #ffffff;
+box-shadow: 0px 0px 18px rgba(143, 143, 143, 0.4);
+}
+
+.form-control, .form-select {
+background-color: #2e2e2e;
+color: #ffffff;
+border-color: #444444;
+}
+
+.form-select option span.flag-icon {
+margin-right: 8px; /* Space between flag and text */
+width: 20px; /* Adjust the flag size */
+height: auto;
+}
+
+.form-control::placeholder {
+color: #bbbbbb;
+}
+
+.converted-output {
+    background-color: #3b5c7c;
+}
+
+.btn-primary {
+background-color: #a06af9;
+color: #ffffff;
+border: none;
+position: relative;
+left: 37%;
+padding: 8px 30px;
+font-size: 1.2rem;
+border-radius: 5px;
+text-transform: uppercase;
+}
+
+.btn-primary:hover {
+background-color: #a06af9;
+border-color: #704dd8;
+}
+
+.detail {
+color: #aaa;
+margin: 3rem 1rem;
+text-align:justify;
+font-size: 0.8rem;
+font-weight: 500;
+}
+
+.hero-heading {
+display: inline-block;
+position: relative;
+}
+
+/* Additional styling for flag icons in select dropdown */
+.form-select option {
+display: flex;
+align-items: center;
+}
+.form-select option span.flag-icon {
+margin-right: 8px;
+}
+
+.form-select option span.fi {
+margin-right: 8px;  /* Space between the flag and text */
+width: 20px;        /* Adjust the size of the flag */
+height: auto;
+display: inline-block;
+}
+.flag-disp {
+display: flex;
+align-content: center;
+position: relative;
+justify-content: center;
+}
+.flag-disp span {
+padding: 0 15px;
+}
+
+.currency-chart {
+margin: 20px 17rem;
+background-color: red;
+min-height: 300px;
+padding: 10px;
+/* background-color: #fff; */
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+background-color: #111111;
+color: #ffffff;
+padding: 40px 0;
+font-family: 'Roboto', sans-serif;
+}
+
+.footer .container {
+max-width: 1200px;
+margin: 10px auto;
+padding: 0 6rem;
+}
+
+.footer .footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.footer p {
+font-size: 0.9rem;
+margin: 0;
+color: #aaaaaa;
+}
+
+.footer .social-icons {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+}
+
+.footer .social-icons a {
+color: #aaaaaa;
+font-size: 1.2rem;
+transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+color: #ffffff;
+}
+
+/* Styles for select options with flags */
+select {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+background-color: #f9f9f9;
+border: 1px solid #ccc;
+padding: 10px;
+font-size: 1rem;
+width: 100%;
+border-radius: 4px;
+}
+
+select option {
+padding: 5px;
+}
+
+select option:before {
+content: attr(data-icon);
+display: inline-block;
+width: 1.5rem;
+height: 1rem;
+background-size: contain;
+margin-right: 8px;
+vertical-align: middle;
+}
+
+option[data-icon="fi-us"]:before {
+background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/us.svg');
+}
+
+option[data-icon="fi-gb"]:before {
+background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/gb.svg');
+}
+
+option[data-icon="fi-eu"]:before {
+background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/eu.svg');
+}
+
+option[data-icon="fi-ca"]:before {
+background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/ca.svg');
+}
+
+option[data-icon="fi-jp"]:before {
+background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/jp.svg');
+}
+
+option[data-icon="fi-ng"]:before {
+background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/ng.svg');
+}
+
+option[data-icon="fi-gh"]:before {
+background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/flags/4x3/gh.svg');
+}
+
+/* General styles for the form */
+.form-label {
+margin-bottom: 8px;
+font-weight: bold;
+}
+
+/* Mobile Layout */
+@media (max-width: 767px) {
+    body {
+        padding-top: 70px; 
+        margin: 0;
+        min-height: 100vh; 
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+        /* background-color: #704dd8; */
+    }
+
+    .navbar {
+        padding: 0.75rem 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        margin: 0;
+    }
+
+    .navbar-brand {
+        margin: 0;
+        font-size: 1.5rem;
+        /* font-weight: 600; */
+        color: #a06af9;
+        letter-spacing: 1px;
+    }
+
+    .navbar-toggler {
+        border: none; /* Clean up default button */
+        transition: transform 0.3s ease; /* Smooth toggle animation */
+    }
+
+    .navbar .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        width: 1.5em;
+        height: 1.5em;
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-toggler:hover .navbar-toggler-icon {
+        transform: scale(1.1);
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column; /* Stack items vertically for mobile */
+        align-items: flex-start; /* Full-width items */
+        /* background: #2c2c2c; */
+        border-radius: 8px; /* Rounded corners */
+        margin-top: 0.5rem; /* Space from toggler */
+        overflow: hidden; /* Clean edges */
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        text-align: left;
+        padding: 1rem 1rem; 
+        color: #ddd; 
+        font-size: 1.1rem; 
+        font-weight: 500; 
+        border-bottom: 1px solid rgba(68, 68, 68, 0.5); 
+        transition: background 0.3s ease, color 0.3s ease; /* Smooth hover */
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        background: #3a3a3a; /* Highlight on tap/hover */
+        color: #fff; /* Brighter text on interaction */
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link.active {
+        color: #fff;
+    }
+
+    .hero-section {
+        color: #ffffff;
+        height: 15vh;
+    }
+
+    .hero-section h1{
+        font-size: 1.9rem;
+
+    }
+
+    /* Converter Card Styling for Mobile */
+    .card {
+        background: #1a1a1a; /* Darker background matching your image */
+        margin: 0.1rem 2rem;
+        padding: 0.4rem 0.2rem;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h3 {
+        padding: 1rem 0;
+    }
+
+    .form-control {
+        background-color: #2c2c2c; /* Dark gray for inputs, matching your image */
+        color: #fff;
+        border: 1px solid #444;
+        width: 100%; /* Full-width for stacking */
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        height: auto;
+    }
+
+    .form-select {
+        background-color: #2c2c2c; 
+        color: #fff;
+        border: 1px solid #444;
+        width: 100%; /* Full-width for mobile stacking, not 40vh */
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        border-bottom: 20px thick;
+    }
+
+    .convert-btn {
+        /* justify-self: center;
+        align-self: center; */
+        background-color: #704dd8;
+        color: #fff;
+        border: none;
+        padding: 0.75rem;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 1rem;
+        height: 7vh;
+        transition: background-color 0.3s ease;
+        position: relative;
+        left: 0;
+    }
+
+    .detail {
+        color: #666;
+        margin: 2rem 2rem;
+        text-align:justify;
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        flex: 1; /* Expand to fill remaining space */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        width: 100%; /* Full width */
+        padding: 0; /* Remove padding to avoid offset */
+    }
+
+    .container {
+        width: 100%; /* Override Bootstrap’s max-width */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0; /* Remove Bootstrap padding */
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .zee {
+        display: none; /* Hidden in mobile */
+    }
+
+    .social-icons div {
+        /* background-color: #3b5c7c; */
+        display: flex;
+        gap: 1rem; /* Space between icons */
+        justify-content: center; /* Center icons inside div */
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+        opacity: 0.3;
+    }
+
+    .social-icons a:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Tablet and Desktop Layout */
+@media (min-width: 768px) {
+    .navbar {
+        padding: 0.75rem 7rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        margin: 0;
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+    }
+
+    .converter-card .mb-3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+        gap: 1rem; /* Space between columns */
+        margin-bottom: 1rem; /* Consistent spacing */
+    }
+
+    .converter-card .mb-3 label {
+        display: block; /* Ensure labels stay above inputs */
+    }
+
+    /* Full-width for Switch, Date, and Convert button */
+    .converter-card .mb-3:nth-child(2), /* Switch button */
+    .converter-card .mb-3:nth-child(5), /* Date */
+    .converter-card .mb-3:nth-child(6)  /* Convert button (button outside mb-3, adjust below) */
+    {
+        grid-column: span 2; /* Full-width */
+        display: flex;
+        justify-content: center; /* Center Switch button */
+    }
+
+    /* Ensure Convert button is full-width */
+    .converter-card .convert-btn {
+        width: 100%; /* Full-width button */
+    }
+
+    /* Shorter width for selects and inputs in columns */
+    .converter-card .form-select,
+    .converter-card .form-control {
+        max-width: 100%; /* Prevent overflow */
+        width: 100%; /* Ensure full column width */
+    }
+}
