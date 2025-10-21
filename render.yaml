@@ -1,7 +1,6 @@
 services:
   - type: web
     name: currency-converter
-    env: php
     plan: free
     buildCommand: |
       composer install --no-dev --optimize-autoloader
