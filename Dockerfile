@@ -1,16 +1,16 @@
-FROM php:8.2-cli
+# Use PHP 8.3 with Apache
+FROM serversideup/php:8.3-fpm-nginx
 
 WORKDIR /var/www/html
 
-# Copy composer files first for better caching
-COPY composer.json composer.lock ./
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-# Install dependencies
-RUN composer install --no-dev --optimize-autoloader --no-scripts
-
-# Copy application code
+# Copy files
 COPY . .
 
-EXPOSE 8000
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
+# Install composer dependencies
+RUN composer install --no-dev --optimize-autoloader
+
+# Optimize Laravel
+RUN php artisan config:cache && php artisan route:cache && php artisan view:cache
+
+EXPOSE 8080
+CMD ["php-fpm"]
