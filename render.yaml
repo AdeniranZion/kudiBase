@@ -16,7 +16,7 @@ services:
         value: false
       - key: APP_URL
         value: https://currency-converter.onrender.com
-      - key: APP_KEY
+      - key: SI2t1o/+hTywXUiKfbWjw5zsuqDZigpyT6wKliq2FJc=
         sync: false  # You'll set this manually in Render dashboard
 
         
