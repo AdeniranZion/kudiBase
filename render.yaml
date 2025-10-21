@@ -2,6 +2,8 @@ services:
   - type: web
     name: currency-converter
     plan: free
+    # no runtime or env key here!
+    rootDir: .             # (optional; remove if app is at repo root)
     buildCommand: |
       composer install --no-dev --optimize-autoloader
       php artisan config:cache
@@ -15,4 +17,3 @@ services:
         value: false
       - key: APP_URL
         value: https://currency-converter.onrender.com
-
