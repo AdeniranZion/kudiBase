@@ -15,8 +15,4 @@ services:
         value: false
       - key: APP_URL
         value: https://currency-converter.onrender.com
-      - key: APP_KEY
-        value: SI2t1o/+hTywXUiKfbWjw5zsuqDZigpyT6wKliq2FJc=
 
-
-        
